@@ -2,6 +2,9 @@ name: Deploy web game to GitHub Pages
 
 on:
   workflow_dispatch:
+  push:
+    tags:
+      - spaceapps-web-2026
 
 permissions:
   contents: read
