@@ -1,0 +1,22 @@
+// Provisional gameplay balance. Values are not spacecraft specifications.
+export const CFG={version:5,budget:900,grants:[150,200],batteryWh:1600,storageMB:128,solarArrival:0.85,dvPerKg:0.003,stageDays:30,baseTemp:2.5,baseHumidity:70,criticalRisk:80};
+export const ROLES=[['Engineering','Ingeniería'],['Biology','Biología'],['Communications','Comunicaciones'],['Mission lead','Dirección']];
+export const PEOPLE=['Pip','Nim','Eko','Lum'];
+export const AVATARS=['engineering','biology','communications','management'];
+export const ITEMS=[
+{id:'chamberB',name:['Chamber B','Cámara B'],role:1,cost:150,kg:45,w:200,gen:0,kind:'chamber',icon:'chamber_b',desc:['Light, passive cooling. Environmental drift accumulates on longer journeys.','Ligera, refrigeración pasiva. Acumula desvíos ambientales en viajes largos.']},
+{id:'chamberA',name:['Chamber A','Cámara A'],role:1,cost:300,kg:100,w:800,gen:0,kind:'chamber',icon:'chamber_a',desc:['Active climate control. Needs extra panels; does not guarantee biological survival.','Control ambiental activo. Requiere paneles extra; no garantiza supervivencia biológica.']},
+{id:'panels',name:['Solar wings','Paneles solares'],role:0,cost:400,kg:15,w:0,gen:400,icon:'solar_panels',desc:['Adds 400 W at departure. Check the lower output at arrival.','Añade 400 W a la salida. Comprueba la menor potencia a la llegada.']},
+{id:'thermal',name:['Backup sensors','Sensores de respaldo'],role:0,cost:150,kg:10,w:20,gen:0,icon:'backup_sensors',desc:['Limits climate drift and helps the autonomous cooling response.','Reduce el desvío ambiental y ayuda a la refrigeración autónoma.']},
+{id:'antenna',name:['Deep Space Link','Antena de alta ganancia'],role:2,cost:300,kg:30,w:80,gen:0,icon:'antenna',desc:['Sends 64 MB per stage instead of 16. Signal delay still applies.','Envía 64 MB por etapa en vez de 16. La señal sigue teniendo demora.']},
+{id:'dosimeter',name:['Dosimeter','Dosímetro'],role:2,cost:50,kg:5,w:10,gen:0,icon:'dosimeter',desc:['Collects radiation observations: +8 MB of science per stage. It does not provide shielding.','Registra radiación: +8 MB científicos por etapa. No aporta blindaje.']}
+];
+export const LAUNCHERS=[{id:'scout',name:'Scout / LEO',cost:0,cap:50,dv:7,power:600,mars:false},{id:'medium',name:'Aurelia / Medium',cost:0,cap:250,dv:7,power:600,mars:true},{id:'heavy',name:'Atlaswing / Heavy',cost:250,cap:1000,dv:8,power:800,mars:true}];
+export const ROUTES=[{id:'standard',name:['Standard transfer','Transferencia estándar'],days:288,dv:4.79},{id:'fast',name:['Fast transfer','Transferencia rápida'],days:272,dv:4.84}];
+export const SOURCES=[
+{label:'NASA · verified context',title:'Travel to Mars: generally 7–10 months',url:'https://www.nasa.gov/directorates/smd/how-long-does-it-take-to-get-to-the-moon-mars-jupiter-we-asked-a-nasa-expert-episode-51/',use:'Engine accepts direct transfers only within 210–300 days (30-day educational months). Route duration drives elapsed hours, cumulative energy and environmental exposure. Exact 272/288-day scenarios are team inputs, not independently verified ephemerides.'},
+{label:'ESA · verified context',title:'Radio signals: about 4–24 minutes one way',url:'https://blogs.esa.int/mex/2012/08/05/time-delay-between-mars-and-earth/',use:'The model interpolates 4–24 minutes. Event decisions compare round-trip delay with a 20-minute response window. A stronger antenna changes throughput, not light speed.'},
+{label:'JPL · design inspiration',title:'Concept Maturity Levels',url:'https://dataverse.jpl.nasa.gov/dataset.xhtml?persistentId=hdl:2014/44299',use:'CML-inspired preparation milestones. In-game criteria and grants are fictional, not official CML certification.'},
+{label:'Team · provisional model',title:'Equipment, routes and biological model',url:null,use:'800 W resolves the 700/800 W conflict using the final team table. Costs, launchers, linear delta-v penalty, 85% cruise-power factor, 1600 Wh battery, 128 MB storage, 2.5 °C/70% RH targets and all risk thresholds are gameplay assumptions. Exact route query provenance remains unverified. Venus 352-day transfer is outside the 7–10-month MVP.'},
+{label:'Open scientific question',title:'Dormant bumblebee queens in interplanetary flight',url:null,use:'Risk is an educational index, never a survival probability. No claim is made that bumblebees can survive transport to Mars. Arrival ends the MVP: no landing, colony or pollination is simulated.'}
+];

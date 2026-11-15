@@ -1,0 +1,32 @@
+[
+  {
+    "label": "NASA · verified context",
+    "title": "Travel to Mars: generally 7–10 months",
+    "url": "https://www.nasa.gov/directorates/smd/how-long-does-it-take-to-get-to-the-moon-mars-jupiter-we-asked-a-nasa-expert-episode-51/",
+    "use": "Engine accepts direct transfers only within 210–300 days (30-day educational months). Route duration drives elapsed hours, cumulative energy and environmental exposure. Exact 272/288-day scenarios are team inputs, not independently verified ephemerides."
+  },
+  {
+    "label": "ESA · verified context",
+    "title": "Radio signals: about 4–24 minutes one way",
+    "url": "https://blogs.esa.int/mex/2012/08/05/time-delay-between-mars-and-earth/",
+    "use": "The model interpolates 4–24 minutes. Event decisions compare round-trip delay with a 20-minute response window. A stronger antenna changes throughput, not light speed."
+  },
+  {
+    "label": "JPL · design inspiration",
+    "title": "Concept Maturity Levels",
+    "url": "https://dataverse.jpl.nasa.gov/dataset.xhtml?persistentId=hdl:2014/44299",
+    "use": "CML-inspired preparation milestones. In-game criteria and grants are fictional, not official CML certification."
+  },
+  {
+    "label": "Team · provisional model",
+    "title": "Equipment, routes and biological model",
+    "url": null,
+    "use": "800 W resolves the 700/800 W conflict using the final team table. Costs, launchers, linear delta-v penalty, 85% cruise-power factor, 1600 Wh battery, 128 MB storage, 2.5 °C/70% RH targets and all risk thresholds are gameplay assumptions. Exact route query provenance remains unverified. Venus 352-day transfer is outside the 7–10-month MVP."
+  },
+  {
+    "label": "Open scientific question",
+    "title": "Dormant bumblebee queens in interplanetary flight",
+    "url": null,
+    "use": "Risk is an educational index, never a survival probability. No claim is made that bumblebees can survive transport to Mars. Arrival ends the MVP: no landing, colony or pollination is simulated."
+  }
+]
