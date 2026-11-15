@@ -19,12 +19,42 @@
     "baseHumidity": 70,
     "criticalRisk": 80
   },
+  "ROLES": [
+    [
+      "Engineering",
+      "Engineering"
+    ],
+    [
+      "Biology",
+      "Biology"
+    ],
+    [
+      "Communications",
+      "Communications"
+    ],
+    [
+      "Mission lead",
+      "Mission lead"
+    ]
+  ],
+  "PEOPLE": [
+    "Pip",
+    "Nim",
+    "Eko",
+    "Lum"
+  ],
+  "AVATARS": [
+    "engineering",
+    "biology",
+    "communications",
+    "management"
+  ],
   "ITEMS": [
     {
       "id": "chamberA",
       "name": [
-        "Chamber A — Economy",
-        "Chamber A — Economy"
+        "Chamber A - Economy",
+        "Chamber A - Economy"
       ],
       "role": 1,
       "cost": 150,
@@ -32,17 +62,17 @@
       "w": 200,
       "gen": 0,
       "kind": "chamber",
-      "icon": "chamber_a",
+      "icon": 1,
       "desc": [
-        "Heavy, low-power chamber. Expect heat alarms without a sensor or toolkit.",
-        "Heavy, low-power chamber. Expect heat alarms without a sensor or toolkit."
+        "Fits the 600 W base. Heavy, and its temperature is harder to hold: expect at least two heat alarms.",
+        "Fits the 600 W base. Heavy, and its temperature is harder to hold: expect at least two heat alarms."
       ]
     },
     {
       "id": "chamberB",
       "name": [
-        "Chamber B — Vanguard",
-        "Chamber B — Vanguard"
+        "Chamber B - Vanguard",
+        "Chamber B - Vanguard"
       ],
       "role": 1,
       "cost": 300,
@@ -50,10 +80,10 @@
       "w": 500,
       "gen": 0,
       "kind": "chamber",
-      "icon": "chamber_b",
+      "icon": 0,
       "desc": [
-        "Active precise climate control. No heat trouble, but 500 W leaves little power for instruments.",
-        "Active precise climate control. No heat trouble, but 500 W leaves little power for instruments."
+        "Active, precise climate control. No heat trouble, but 500 W leaves little power for instruments.",
+        "Active, precise climate control. No heat trouble, but 500 W leaves little power for instruments."
       ]
     },
     {
@@ -68,10 +98,10 @@
       "w": 0,
       "gen": 400,
       "kind": "power",
-      "icon": "solar_panels",
+      "icon": 2,
       "desc": [
-        "Adds 400 W. Heavy and expensive.",
-        "Adds 400 W. Heavy and expensive."
+        "+400 W. Required if use goes over 600 W. Very expensive and heavy.",
+        "+400 W. Required if use goes over 600 W. Very expensive and heavy."
       ]
     },
     {
@@ -86,10 +116,10 @@
       "w": 20,
       "gen": 0,
       "kind": "sensor",
-      "icon": "backup_sensors",
+      "icon": 3,
       "desc": [
-        "Catches heat alarms and self-regulates (+10 W).",
-        "Catches heat alarms and self-regulates (+10 W)."
+        "Catches heat alarms in time and self-regulates (+10 W while it works).",
+        "Catches heat alarms in time and self-regulates (+10 W while it works)."
       ]
     },
     {
@@ -104,7 +134,7 @@
       "w": 5,
       "gen": 0,
       "kind": "tools",
-      "icon": "tools",
+      "icon": 8,
       "desc": [
         "Two repair actions for mechanical failures or heat alarms.",
         "Two repair actions for mechanical failures or heat alarms."
@@ -122,10 +152,10 @@
       "w": 80,
       "gen": 0,
       "kind": "comms",
-      "icon": "antenna",
+      "icon": 4,
       "desc": [
-        "Keeps contact with Earth and sends 64 MB per stage.",
-        "Keeps contact with Earth and sends 64 MB per stage."
+        "Keeps contact with Earth and sends 64 MB per stage. Uses a big share of the payload.",
+        "Keeps contact with Earth and sends 64 MB per stage. Uses a big share of the payload."
       ]
     },
     {
@@ -140,10 +170,10 @@
       "w": 40,
       "gen": 0,
       "kind": "comms",
-      "icon": "antenna",
+      "icon": 9,
       "desc": [
-        "Takes over if the main link fails; minor data penalty.",
-        "Takes over if the main link fails; minor data penalty."
+        "Takes over if the main link fails, so telemetry is not lost.",
+        "Takes over if the main link fails, so telemetry is not lost."
       ]
     },
     {
@@ -158,10 +188,10 @@
       "w": 10,
       "gen": 0,
       "kind": "science",
-      "icon": "dosimeter",
+      "icon": 5,
       "desc": [
-        "Measures radiation (+8 MB science per stage) and warns of storms. No shielding.",
-        "Measures radiation (+8 MB science per stage) and warns of storms. No shielding."
+        "Measures cosmic radiation (+8 MB science per stage) and warns of solar storms. No shielding.",
+        "Measures cosmic radiation (+8 MB science per stage) and warns of solar storms. No shielding."
       ]
     }
   ],
@@ -188,7 +218,8 @@
       "depart": "Dec 21, 2030",
       "arrive": "Oct 5, 2031",
       "inj": 3.68,
-      "post": 1.11
+      "post": 1.11,
+      "note": "Earth-Mars. Longest margin, easiest manoeuvre."
     },
     {
       "id": "fast",
@@ -201,7 +232,8 @@
       "depart": "Dec 21, 2030",
       "arrive": "Sep 19, 2031",
       "inj": 3.71,
-      "post": 1.13
+      "post": 1.13,
+      "note": "Earth-Mars. 16 days shorter, a bit more delta-v."
     },
     {
       "id": "venus",
@@ -214,7 +246,34 @@
       "depart": "Feb 20, 2030",
       "arrive": "Feb 7, 2031",
       "inj": 4.81,
-      "post": 2.01
+      "post": 2.01,
+      "note": "Earth-Venus-Mars. Needs a very light ship and the dosimeter."
     }
+  ],
+  "GUIDE": [
+    [
+      "POWER (W)",
+      "What the ship makes and uses right now. The game assumes panels make 85% of their output on arrival; this is a simplified team rule."
+    ],
+    [
+      "ENERGY (Wh)",
+      "The battery reserve. It drains when use beats generation."
+    ],
+    [
+      "DELTA-V (km/s)",
+      "The game launcher has 7.0 km/s minus 0.008 per kg. Each route has a minimum from the linked NASA Ames query; this is a simplified game comparison, not a real vehicle analysis."
+    ],
+    [
+      "DATA (MB)",
+      "Science received on Earth. You need an antenna (or backup) to send it."
+    ],
+    [
+      "DIAPAUSE",
+      "Queens sleep through winter for about 6–9 months, with a very slow metabolism."
+    ],
+    [
+      "RISK (0–100)",
+      "A game index from chamber conditions. Not a real chance of survival."
+    ]
   ]
 }

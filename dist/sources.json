@@ -2,9 +2,9 @@
   {
     "label": "VERIFIED",
     "nasa": true,
-    "title": "NASA Ames Trajectory Browser",
-    "url": "https://trajbrowser.arc.nasa.gov/",
-    "use": "Central NASA data: the three routes (dates, days, delta-v). Launch is blocked unless your delta-v covers the route."
+    "title": "NASA Ames Trajectory Browser — Earth to Mars rendezvous",
+    "url": "https://trajbrowser.arc.nasa.gov/traj_browser.php?DTunit=yrs&LD1=2029&LD2=2040&chk_target_list=on&maxDT=1.5&maxDV=7.0&maxMag=25&maxOCC=4&min=DT&mission_class=oneway&mission_type=rendezvous&submit=Search&target_list=Mars&wdw_width=-1",
+    "use": "NASA Ames query for one-way Earth-Mars rendezvous. The selected 2030 standard, fast and Venus-assist rows reproduce the game dates, durations and delta-v. Browser delta-v is from 200 km LEO; the game uses these route requirements in its simplified team-defined launcher model."
   },
   {
     "label": "VERIFIED",
@@ -18,7 +18,7 @@
     "nasa": true,
     "title": "NASA Mars Fact Sheet: sunlight ~43% of Earth",
     "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
-    "use": "Why panels make less near Mars. SIMPLIFIED: output falls to 85%, not 43%."
+    "use": "NASA reports Mars sunlight at about 43% of Earth. Separately, the game applies an 85% arrival-power factor as a simplified team rule; it is not converted from the NASA figure."
   },
   {
     "label": "VERIFIED",
@@ -74,7 +74,7 @@
     "nasa": false,
     "title": "Team table: equipment, rocket, events",
     "url": null,
-    "use": "Masses, power, 0.008 km/s per kg, costs, 0.85 solar factor and launcher are team values."
+    "use": "Masses, power, 0.008 km/s per kg, costs, events and the 250 kg / 7.0 km/s / 600 W rocket are team values."
   },
   {
     "label": "OPEN",

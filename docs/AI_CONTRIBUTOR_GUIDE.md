@@ -14,7 +14,7 @@ Las ampliaciones deben mejorar claridad y uso sin cambiar el contenido o las mec
 - `dist/data.js`: parámetros, roles, equipamiento, rutas, guía y fuentes usadas por la aplicación.
 - `dist/audio.js`: música, efectos, volumen y ciclo de pistas.
 - `dist/assets/`: fondos, personajes, equipo, efectos, fuente y audio. `dist/assets/gamemaker-v11/` guarda recursos extraídos de GameMaker v11.
-- `dist/game-balance.json` y `dist/sources.json`: copias de referencia/documentación. No asumir que la aplicación los lee en ejecución; comparar con `dist/data.js` y sincronizarlos cuando corresponda.
+- `dist/game-balance.json` y `dist/sources.json`: copias de referencia/documentación. No asumir que la aplicación los lee en ejecución; `dist/data.js` es la fuente maestra. Después de cambiarlo, ejecutar `npm run sync:data`.
 - `tests/engine.test.js`: pruebas de reglas, flujo, guardados e incidentes.
 
 La aplicación no tiene backend ni dependencias runtime npm; se sirve como web estática desde `dist/`. Ejecutar con `npm start`; abrir `http://localhost:8080`.
@@ -35,6 +35,9 @@ El motor guarda el progreso localmente bajo `beeyond-v11`; también reconoce la 
 - La escena usa pixel art; configurar `image-rendering: pixelated` y evitar filtros que suavicen sprites. Mantener proporciones al escalar fondos y personajes.
 - Mantener juntas la información y la acción correspondiente. Priorizar textos cortos, jerarquía visible, estados seleccionados y bloqueos con causa y orientación.
 - Respetar `:focus-visible`, teclado, lectura por tecnologías de asistencia y controles táctiles. No depender solo del color para comunicar riesgo o estado.
+- Los atajos globales del juego no deben cancelar Enter/Espacio cuando un botón, enlace o campo tiene foco; esos controles deben conservar su activación nativa. Al cerrar una ventana, devolver el foco a quien la abrió.
+- Al volver a dibujar una pantalla o ventana después de una acción, conservar el foco en el control equivalente si sigue disponible; si se deshabilita o desaparece, moverlo a la siguiente acción principal habilitada. Cuando dos botones hacen lo mismo, devolver el foco al botón concreto que abrió la ventana.
+- Las ventanas deben anunciar su encabezado como nombre accesible; controles repetidos deben identificar su equipo, ruta u opción en el nombre accesible sin cambiar el texto visual.
 
 ### Catálogo de recursos
 
@@ -61,9 +64,9 @@ El juego es un modelo educativo simplificado. La agencia Aurelia es ficticia, el
 
 Para nuevas afirmaciones, mantener una tabla editorial con: afirmación exacta, URL y organización/autores, fecha de consulta, dato/unidad, uso dentro del juego, etiqueta (`VERIFIED`, `ADAPTED`, `SINGLE STUDY`, `CONTEXT`, `TEAM`, `OPEN`) y límites relevantes. Separar el origen científico del supuesto de gameplay. Verificar fuentes primarias/oficiales cuando la afirmación sea de NASA o de una institución; no tratar texto de ideas del equipo como evidencia científica.
 
-### Discrepancia pendiente
+### Evidencia y límites de las rutas
 
-`dist/data.js` etiqueta las rutas como `VERIFIED` y atribuye fechas/días/delta-v al NASA Ames Trajectory Browser. `README.md` y `dist/game-balance.json` describen valores exactos de las rutas como supuestos/valores suministrados por el equipo; `dist/sources.json` afirma que la consulta fue del equipo. Antes de anunciar las rutas como verificadas, confirmar la consulta y registrar evidencia reproducible (parámetros/resultado/fecha). Si no está disponible, aclarar en las tres superficies que los datos fueron proporcionados por el equipo y que la fuente es contexto, no verificación independiente. También reconciliar la descripción del factor 0.85 en los datos de equipo.
+La consulta guardada en `dist/data.js` y `dist/sources.json` corresponde al NASA Ames Trajectory Browser; las tres filas coinciden con las rutas del juego. La [evidencia de consulta y resultados](hackathon/evidencia-rutas-nasa.md) registra parámetros, fechas, tiempos de vuelo y delta-v revisados el 15 nov 2026. Mantener el límite: NASA aporta los valores de trayectoria consultados; la nave, penalización por masa, reglas de potencia y costos son un modelo simplificado definido por el equipo. El factor `0.85` es una regla de llegada del juego y no el nivel real de luz solar marciana (~0.43 terrestre). Si cambian los registros, volver a consultar y actualizar a la vez el motor de datos y sus copias/documentación.
 
 No presentar recomendaciones, índices o salidas del modelo como asesoramiento de misión real. Conservar unidades y mostrar redondeo sin alterar los cálculos.
 
@@ -73,7 +76,7 @@ Son oportunidades observadas, todavía no implementadas como parte de esta guía
 
 1. **Reducir obstrucción en el laboratorio:** evaluar colapso/ubicación del panel de objetivo y monitor de abejas para dejar visible la escena; conservar sus textos, controles y acceso por teclado/táctil.
 2. **Explicar métricas y bloqueos:** dar definiciones breves a DV, potencia y energía, y señalar qué requisito falla y qué acción permite resolverlo.
-3. **Unificar lenguaje e instrucciones:** alinear idioma de etiquetas y controles y corregir mensajes como “compare both routes” cuando la pantalla compara tres opciones.
+3. **Unificar lenguaje e instrucciones:** la interfaz y los controles actuales están en inglés; al cambiar las rutas, mantener coherentes el texto, el número de opciones visibles y el mínimo de dos rutas que pide la revisión para obtener la subvención.
 4. **Mejorar adaptación y accesibilidad:** probar foco, contraste, controles táctiles, movimiento reducido, ventanas extensas y lectura en pantallas estrechas.
 
 Prioridad 1 es mejora visual/legibilidad sin cambiar mecánicas; prioridades 2–4 requieren revisión de copy e interacción. Antes de implementar cualquier punto, definir captura/escenario de referencia y criterios de aceptación para ese cambio.

@@ -16,17 +16,17 @@ export const ITEMS=[
 export const LAUNCHERS=[{id:'medium',name:'Aurelia Medium Lift',cost:0,cap:250,dv:7,power:600,mars:true}];
 export const ROUTES=[{id:'standard',name:['Route 1: Standard transfer','Route 1: Standard transfer'],days:288,dv:4.79,depart:'Dec 21, 2030',arrive:'Oct 5, 2031',inj:3.68,post:1.11,note:'Earth-Mars. Longest margin, easiest manoeuvre.'},{id:'fast',name:['Route 2: Fast transfer','Route 2: Fast transfer'],days:272,dv:4.84,depart:'Dec 21, 2030',arrive:'Sep 19, 2031',inj:3.71,post:1.13,note:'Earth-Mars. 16 days shorter, a bit more delta-v.'},{id:'venus',name:['Route 3: Venus gravity assist','Route 3: Venus gravity assist'],days:352,dv:6.82,depart:'Feb 20, 2030',arrive:'Feb 7, 2031',inj:4.81,post:2.01,note:'Earth-Venus-Mars. Needs a very light ship and the dosimeter.'}];
 export const GUIDE=[
-['POWER (W)','What the ship makes and uses right now. Near Mars, panels make less.'],
+['POWER (W)','What the ship makes and uses right now. The game assumes panels make 85% of their output on arrival; this is a simplified team rule.'],
 ['ENERGY (Wh)','The battery reserve. It drains when use beats generation.'],
-['DELTA-V (km/s)','7.0 km/s minus 0.008 for every kg. Each NASA route needs a minimum.'],
+['DELTA-V (km/s)','The game launcher has 7.0 km/s minus 0.008 per kg. Each route has a minimum from the linked NASA Ames query; this is a simplified game comparison, not a real vehicle analysis.'],
 ['DATA (MB)','Science received on Earth. You need an antenna (or backup) to send it.'],
 ['DIAPAUSE','Queens sleep through winter for about 6–9 months, with a very slow metabolism.'],
 ['RISK (0–100)','A game index from chamber conditions. Not a real chance of survival.']
 ];
 export const SOURCES=[
-{label:'VERIFIED',nasa:true,title:'NASA Ames Trajectory Browser',url:'https://trajbrowser.arc.nasa.gov/',use:'Central NASA data: the three routes (dates, days, delta-v). Launch is blocked unless your delta-v covers the route.'},
+{label:'VERIFIED',nasa:true,title:'NASA Ames Trajectory Browser — Earth to Mars rendezvous',url:'https://trajbrowser.arc.nasa.gov/traj_browser.php?DTunit=yrs&LD1=2029&LD2=2040&chk_target_list=on&maxDT=1.5&maxDV=7.0&maxMag=25&maxOCC=4&min=DT&mission_class=oneway&mission_type=rendezvous&submit=Search&target_list=Mars&wdw_width=-1',use:'NASA Ames query for one-way Earth-Mars rendezvous. The selected 2030 standard, fast and Venus-assist rows reproduce the game dates, durations and delta-v. Browser delta-v is from 200 km LEO; the game uses these route requirements in its simplified team-defined launcher model.'},
 {label:'VERIFIED',nasa:true,title:'NASA: Earth to Mars takes about 7–10 months',url:'https://www.nasa.gov/directorates/smd/how-long-does-it-take-to-get-to-the-moon-mars-jupiter-we-asked-a-nasa-expert-episode-51/',use:'Trip length drives energy use, climate exposure and the chance of failures.'},
-{label:'VERIFIED',nasa:true,title:'NASA Mars Fact Sheet: sunlight ~43% of Earth',url:'https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html',use:'Why panels make less near Mars. SIMPLIFIED: output falls to 85%, not 43%.'},
+{label:'VERIFIED',nasa:true,title:'NASA Mars Fact Sheet: sunlight ~43% of Earth',url:'https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html',use:'NASA reports Mars sunlight at about 43% of Earth. Separately, the game applies an 85% arrival-power factor as a simplified team rule; it is not converted from the NASA figure.'},
 {label:'VERIFIED',nasa:true,title:'NASA Deep Space Network',url:'https://www.nasa.gov/communicating-with-missions/dsn/',use:'Antennas on Earth that talk to spacecraft. The signal-loss event uses it as context.'},
 {label:'VERIFIED',nasa:false,title:'ESA Mars Express: signal delay 4–24 min one way',url:'https://blogs.esa.int/mex/2012/08/05/time-delay-between-mars-and-earth/',use:'Why the spacecraft often has to fix problems on its own.'},
 {label:'ADAPTED',nasa:true,title:'JPL Concept Maturity Levels',url:'https://dataverse.jpl.nasa.gov/dataset.xhtml?persistentId=hdl:2014/44299',use:'Design milestones are CML-inspired. The grants are fictional.'},
