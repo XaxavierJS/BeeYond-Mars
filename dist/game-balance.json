@@ -1,16 +1,19 @@
 {
-  "status": "provisional_game_model",
+  "status": "team_defined_educational_game_model",
   "CFG": {
-    "version": 5,
+    "version": 11,
     "budget": 900,
     "grants": [
       150,
       200
     ],
+    "rocketCap": 250,
+    "rocketDv": 7,
+    "rocketPower": 600,
     "batteryWh": 1600,
     "storageMB": 128,
     "solarArrival": 0.85,
-    "dvPerKg": 0.003,
+    "dvPerKg": 0.008,
     "stageDays": 30,
     "baseTemp": 2.5,
     "baseHumidity": 70,
@@ -18,136 +21,158 @@
   },
   "ITEMS": [
     {
-      "id": "chamberB",
+      "id": "chamberA",
       "name": [
-        "Chamber B",
-        "Cámara B"
+        "Chamber A — Economy",
+        "Chamber A — Economy"
       ],
       "role": 1,
       "cost": 150,
-      "kg": 45,
+      "kg": 135,
       "w": 200,
-      "gen": 0,
-      "kind": "chamber",
-      "icon": "chamber_b",
-      "desc": [
-        "Light, passive cooling. Environmental drift accumulates on longer journeys.",
-        "Ligera, refrigeración pasiva. Acumula desvíos ambientales en viajes largos."
-      ]
-    },
-    {
-      "id": "chamberA",
-      "name": [
-        "Chamber A",
-        "Cámara A"
-      ],
-      "role": 1,
-      "cost": 300,
-      "kg": 100,
-      "w": 800,
       "gen": 0,
       "kind": "chamber",
       "icon": "chamber_a",
       "desc": [
-        "Active climate control. Needs extra panels; does not guarantee biological survival.",
-        "Control ambiental activo. Requiere paneles extra; no garantiza supervivencia biológica."
+        "Heavy, low-power chamber. Expect heat alarms without a sensor or toolkit.",
+        "Heavy, low-power chamber. Expect heat alarms without a sensor or toolkit."
+      ]
+    },
+    {
+      "id": "chamberB",
+      "name": [
+        "Chamber B — Vanguard",
+        "Chamber B — Vanguard"
+      ],
+      "role": 1,
+      "cost": 300,
+      "kg": 90,
+      "w": 500,
+      "gen": 0,
+      "kind": "chamber",
+      "icon": "chamber_b",
+      "desc": [
+        "Active precise climate control. No heat trouble, but 500 W leaves little power for instruments.",
+        "Active precise climate control. No heat trouble, but 500 W leaves little power for instruments."
       ]
     },
     {
       "id": "panels",
       "name": [
-        "Solar wings",
-        "Paneles solares"
+        "Extra solar panels",
+        "Extra solar panels"
       ],
       "role": 0,
       "cost": 400,
-      "kg": 15,
+      "kg": 70,
       "w": 0,
       "gen": 400,
+      "kind": "power",
       "icon": "solar_panels",
       "desc": [
-        "Adds 400 W at departure. Check the lower output at arrival.",
-        "Añade 400 W a la salida. Comprueba la menor potencia a la llegada."
+        "Adds 400 W. Heavy and expensive.",
+        "Adds 400 W. Heavy and expensive."
       ]
     },
     {
       "id": "thermal",
       "name": [
-        "Backup sensors",
-        "Sensores de respaldo"
+        "Redundant thermal sensor",
+        "Redundant thermal sensor"
       ],
       "role": 0,
       "cost": 150,
-      "kg": 10,
+      "kg": 0.3,
       "w": 20,
       "gen": 0,
-      "icon": "thermal_sensor",
+      "kind": "sensor",
+      "icon": "backup_sensors",
       "desc": [
-        "Limits climate drift and helps the autonomous cooling response.",
-        "Reduce el desvío ambiental y ayuda a la refrigeración autónoma."
+        "Catches heat alarms and self-regulates (+10 W).",
+        "Catches heat alarms and self-regulates (+10 W)."
+      ]
+    },
+    {
+      "id": "toolkit",
+      "name": [
+        "Repair toolkit",
+        "Repair toolkit"
+      ],
+      "role": 0,
+      "cost": 150,
+      "kg": 20,
+      "w": 5,
+      "gen": 0,
+      "kind": "tools",
+      "icon": "tools",
+      "desc": [
+        "Two repair actions for mechanical failures or heat alarms.",
+        "Two repair actions for mechanical failures or heat alarms."
       ]
     },
     {
       "id": "antenna",
       "name": [
-        "Deep Space Link",
-        "Antena de alta ganancia"
+        "High-gain antenna",
+        "High-gain antenna"
       ],
       "role": 2,
       "cost": 300,
-      "kg": 30,
+      "kg": 60,
       "w": 80,
       "gen": 0,
+      "kind": "comms",
       "icon": "antenna",
       "desc": [
-        "Sends 64 MB per stage instead of 16. Signal delay still applies.",
-        "Envía 64 MB por etapa en vez de 16. La señal sigue teniendo demora."
+        "Keeps contact with Earth and sends 64 MB per stage.",
+        "Keeps contact with Earth and sends 64 MB per stage."
+      ]
+    },
+    {
+      "id": "backup",
+      "name": [
+        "Backup comms system",
+        "Backup comms system"
+      ],
+      "role": 2,
+      "cost": 150,
+      "kg": 25,
+      "w": 40,
+      "gen": 0,
+      "kind": "comms",
+      "icon": "antenna",
+      "desc": [
+        "Takes over if the main link fails; minor data penalty.",
+        "Takes over if the main link fails; minor data penalty."
       ]
     },
     {
       "id": "dosimeter",
       "name": [
-        "Dosimeter",
-        "Dosímetro"
+        "Radiation dosimeter",
+        "Radiation dosimeter"
       ],
       "role": 2,
       "cost": 50,
-      "kg": 5,
+      "kg": 0.3,
       "w": 10,
       "gen": 0,
+      "kind": "science",
       "icon": "dosimeter",
       "desc": [
-        "Collects radiation observations: +8 MB of science per stage. It does not provide shielding.",
-        "Registra radiación: +8 MB científicos por etapa. No aporta blindaje."
+        "Measures radiation (+8 MB science per stage) and warns of storms. No shielding.",
+        "Measures radiation (+8 MB science per stage) and warns of storms. No shielding."
       ]
     }
   ],
   "LAUNCHERS": [
     {
-      "id": "scout",
-      "name": "Scout / LEO",
-      "cost": 0,
-      "cap": 50,
-      "dv": 7,
-      "power": 600,
-      "mars": false
-    },
-    {
       "id": "medium",
-      "name": "Aurelia / Medium",
+      "name": "Aurelia Medium Lift",
       "cost": 0,
       "cap": 250,
       "dv": 7,
       "power": 600,
-      "mars": true
-    },
-    {
-      "id": "heavy",
-      "name": "Atlaswing / Heavy",
-      "cost": 250,
-      "cap": 1000,
-      "dv": 8,
-      "power": 800,
       "mars": true
     }
   ],
@@ -155,20 +180,41 @@
     {
       "id": "standard",
       "name": [
-        "Standard transfer",
-        "Transferencia estándar"
+        "Route 1: Standard transfer",
+        "Route 1: Standard transfer"
       ],
       "days": 288,
-      "dv": 4.79
+      "dv": 4.79,
+      "depart": "Dec 21, 2030",
+      "arrive": "Oct 5, 2031",
+      "inj": 3.68,
+      "post": 1.11
     },
     {
       "id": "fast",
       "name": [
-        "Fast transfer",
-        "Transferencia rápida"
+        "Route 2: Fast transfer",
+        "Route 2: Fast transfer"
       ],
       "days": 272,
-      "dv": 4.84
+      "dv": 4.84,
+      "depart": "Dec 21, 2030",
+      "arrive": "Sep 19, 2031",
+      "inj": 3.71,
+      "post": 1.13
+    },
+    {
+      "id": "venus",
+      "name": [
+        "Route 3: Venus gravity assist",
+        "Route 3: Venus gravity assist"
+      ],
+      "days": 352,
+      "dv": 6.82,
+      "depart": "Feb 20, 2030",
+      "arrive": "Feb 7, 2031",
+      "inj": 4.81,
+      "post": 2.01
     }
   ]
 }

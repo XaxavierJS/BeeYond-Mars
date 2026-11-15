@@ -1,32 +1,86 @@
 [
   {
-    "label": "NASA · verified context",
-    "title": "Travel to Mars: generally 7–10 months",
+    "label": "VERIFIED",
+    "nasa": true,
+    "title": "NASA Ames Trajectory Browser",
+    "url": "https://trajbrowser.arc.nasa.gov/",
+    "use": "Central NASA data: the three routes (dates, days, delta-v). Launch is blocked unless your delta-v covers the route."
+  },
+  {
+    "label": "VERIFIED",
+    "nasa": true,
+    "title": "NASA: Earth to Mars takes about 7–10 months",
     "url": "https://www.nasa.gov/directorates/smd/how-long-does-it-take-to-get-to-the-moon-mars-jupiter-we-asked-a-nasa-expert-episode-51/",
-    "use": "Engine accepts direct transfers only within 210–300 days (30-day educational months). Route duration drives elapsed hours, cumulative energy and environmental exposure. Exact 272/288-day scenarios are team inputs, not independently verified ephemerides."
+    "use": "Trip length drives energy use, climate exposure and the chance of failures."
   },
   {
-    "label": "ESA · verified context",
-    "title": "Radio signals: about 4–24 minutes one way",
+    "label": "VERIFIED",
+    "nasa": true,
+    "title": "NASA Mars Fact Sheet: sunlight ~43% of Earth",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+    "use": "Why panels make less near Mars. SIMPLIFIED: output falls to 85%, not 43%."
+  },
+  {
+    "label": "VERIFIED",
+    "nasa": true,
+    "title": "NASA Deep Space Network",
+    "url": "https://www.nasa.gov/communicating-with-missions/dsn/",
+    "use": "Antennas on Earth that talk to spacecraft. The signal-loss event uses it as context."
+  },
+  {
+    "label": "VERIFIED",
+    "nasa": false,
+    "title": "ESA Mars Express: signal delay 4–24 min one way",
     "url": "https://blogs.esa.int/mex/2012/08/05/time-delay-between-mars-and-earth/",
-    "use": "The model interpolates 4–24 minutes. Event decisions compare round-trip delay with a 20-minute response window. A stronger antenna changes throughput, not light speed."
+    "use": "Why the spacecraft often has to fix problems on its own."
   },
   {
-    "label": "JPL · design inspiration",
-    "title": "Concept Maturity Levels",
+    "label": "ADAPTED",
+    "nasa": true,
+    "title": "JPL Concept Maturity Levels",
     "url": "https://dataverse.jpl.nasa.gov/dataset.xhtml?persistentId=hdl:2014/44299",
-    "use": "CML-inspired preparation milestones. In-game criteria and grants are fictional, not official CML certification."
+    "use": "Design milestones are CML-inspired. The grants are fictional."
   },
   {
-    "label": "Team · provisional model",
-    "title": "Equipment, routes and biological model",
-    "url": null,
-    "use": "800 W resolves the 700/800 W conflict using the final team table. Costs, launchers, linear delta-v penalty, 85% cruise-power factor, 1600 Wh battery, 128 MB storage, 2.5 °C/70% RH targets and all risk thresholds are gameplay assumptions. Exact route query provenance remains unverified. Venus 352-day transfer is outside the 7–10-month MVP."
+    "label": "VERIFIED",
+    "nasa": false,
+    "title": "Alford 1969 (Apidologie): diapause 6–9 months",
+    "url": "https://link.springer.com/article/10.1007%2Fs13592-017-0529-z",
+    "use": "Background for a dormant cargo. Earth conditions only."
   },
   {
-    "label": "Open scientific question",
-    "title": "Dormant bumblebee queens in interplanetary flight",
+    "label": "SINGLE STUDY",
+    "nasa": false,
+    "title": "Yoon et al. 2010: 2.5 C and 70% humidity",
+    "url": "https://koreascience.kr/article/JAKO201028542317554.pdf",
+    "use": "Chamber targets. One lab study, not a space standard."
+  },
+  {
+    "label": "CONTEXT",
+    "nasa": false,
+    "title": "Beekman et al. 1998: lab diapause survival",
+    "url": "https://conservationevidencejournal.com/individual-study/1690",
+    "use": "Longer diapause lowers survival on Earth. Never used as a probability."
+  },
+  {
+    "label": "VERIFIED",
+    "nasa": false,
+    "title": "Smithsonian: STS-41-C bees in space (1984)",
+    "url": "https://airandspace.si.edu/collection-objects/bee-enclosure-module-sts-41-c/nasm_A19880031000",
+    "use": "3,300 honeybees built comb in orbit. Inspiration, not proof for bumblebees."
+  },
+  {
+    "label": "TEAM",
+    "nasa": false,
+    "title": "Team table: equipment, rocket, events",
     "url": null,
-    "use": "Risk is an educational index, never a survival probability. No claim is made that bumblebees can survive transport to Mars. Arrival ends the MVP: no landing, colony or pollination is simulated."
+    "use": "Masses, power, 0.008 km/s per kg, costs, 0.85 solar factor and launcher are team values."
+  },
+  {
+    "label": "OPEN",
+    "nasa": false,
+    "title": "Open question: dormant queens in space",
+    "url": null,
+    "use": "Nobody has flown dormant bumblebee queens to Mars. Risk is a game index, not a survival chance."
   }
 ]

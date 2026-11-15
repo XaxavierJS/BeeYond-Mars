@@ -1,0 +1,121 @@
+{
+  "spr_hero": [
+    "assets/gamemaker-v11/spr_hero_0.png"
+  ],
+  "spr_bg_splash": [
+    "assets/gamemaker-v11/spr_bg_splash_0.png"
+  ],
+  "spr_bees": [
+    "assets/gamemaker-v11/spr_bees_0.png",
+    "assets/gamemaker-v11/spr_bees_1.png",
+    "assets/gamemaker-v11/spr_bees_2.png",
+    "assets/gamemaker-v11/spr_bees_3.png"
+  ],
+  "spr_bg_title": [
+    "assets/gamemaker-v11/spr_bg_title_0.png"
+  ],
+  "spr_lab": [
+    "assets/gamemaker-v11/spr_lab_0.png"
+  ],
+  "spr_crew": [
+    "assets/gamemaker-v11/spr_crew_0.png",
+    "assets/gamemaker-v11/spr_crew_1.png",
+    "assets/gamemaker-v11/spr_crew_2.png",
+    "assets/gamemaker-v11/spr_crew_3.png",
+    "assets/gamemaker-v11/spr_crew_4.png",
+    "assets/gamemaker-v11/spr_crew_5.png",
+    "assets/gamemaker-v11/spr_crew_6.png",
+    "assets/gamemaker-v11/spr_crew_7.png",
+    "assets/gamemaker-v11/spr_crew_8.png",
+    "assets/gamemaker-v11/spr_crew_9.png",
+    "assets/gamemaker-v11/spr_crew_10.png",
+    "assets/gamemaker-v11/spr_crew_11.png",
+    "assets/gamemaker-v11/spr_crew_12.png",
+    "assets/gamemaker-v11/spr_crew_13.png",
+    "assets/gamemaker-v11/spr_crew_14.png",
+    "assets/gamemaker-v11/spr_crew_15.png"
+  ],
+  "spr_bg_launchpad": [
+    "assets/gamemaker-v11/spr_bg_launchpad_0.png"
+  ],
+  "spr_rocket": [
+    "assets/gamemaker-v11/spr_rocket_0.png"
+  ],
+  "spr_bg_transit": [
+    "assets/gamemaker-v11/spr_bg_transit_0.png"
+  ],
+  "spr_bg_mars": [
+    "assets/gamemaker-v11/spr_bg_mars_0.png"
+  ],
+  "spr_bg_greenhouse": [
+    "assets/gamemaker-v11/spr_bg_greenhouse_0.png"
+  ],
+  "spr_equip": [
+    "assets/gamemaker-v11/spr_equip_0.png",
+    "assets/gamemaker-v11/spr_equip_1.png",
+    "assets/gamemaker-v11/spr_equip_2.png",
+    "assets/gamemaker-v11/spr_equip_3.png",
+    "assets/gamemaker-v11/spr_equip_4.png",
+    "assets/gamemaker-v11/spr_equip_5.png",
+    "assets/gamemaker-v11/spr_equip_6.png",
+    "assets/gamemaker-v11/spr_equip_7.png",
+    "assets/gamemaker-v11/spr_equip_8.png",
+    "assets/gamemaker-v11/spr_equip_9.png"
+  ],
+  "spr_props": [
+    "assets/gamemaker-v11/spr_props_0.png",
+    "assets/gamemaker-v11/spr_props_1.png",
+    "assets/gamemaker-v11/spr_props_2.png",
+    "assets/gamemaker-v11/spr_props_3.png",
+    "assets/gamemaker-v11/spr_props_4.png",
+    "assets/gamemaker-v11/spr_props_5.png"
+  ],
+  "spr_fx_confetti": [
+    "assets/gamemaker-v11/spr_fx_confetti_0.png",
+    "assets/gamemaker-v11/spr_fx_confetti_1.png",
+    "assets/gamemaker-v11/spr_fx_confetti_2.png",
+    "assets/gamemaker-v11/spr_fx_confetti_3.png",
+    "assets/gamemaker-v11/spr_fx_confetti_4.png",
+    "assets/gamemaker-v11/spr_fx_confetti_5.png"
+  ],
+  "spr_fx_steam": [
+    "assets/gamemaker-v11/spr_fx_steam_0.png",
+    "assets/gamemaker-v11/spr_fx_steam_1.png",
+    "assets/gamemaker-v11/spr_fx_steam_2.png",
+    "assets/gamemaker-v11/spr_fx_steam_3.png",
+    "assets/gamemaker-v11/spr_fx_steam_4.png",
+    "assets/gamemaker-v11/spr_fx_steam_5.png"
+  ],
+  "spr_fx_twinkle": [
+    "assets/gamemaker-v11/spr_fx_twinkle_0.png",
+    "assets/gamemaker-v11/spr_fx_twinkle_1.png",
+    "assets/gamemaker-v11/spr_fx_twinkle_2.png",
+    "assets/gamemaker-v11/spr_fx_twinkle_3.png",
+    "assets/gamemaker-v11/spr_fx_twinkle_4.png",
+    "assets/gamemaker-v11/spr_fx_twinkle_5.png"
+  ],
+  "spr_fx_signal": [
+    "assets/gamemaker-v11/spr_fx_signal_0.png",
+    "assets/gamemaker-v11/spr_fx_signal_1.png",
+    "assets/gamemaker-v11/spr_fx_signal_2.png",
+    "assets/gamemaker-v11/spr_fx_signal_3.png",
+    "assets/gamemaker-v11/spr_fx_signal_4.png",
+    "assets/gamemaker-v11/spr_fx_signal_5.png"
+  ],
+  "spr_fx_coin": [
+    "assets/gamemaker-v11/spr_fx_coin_0.png",
+    "assets/gamemaker-v11/spr_fx_coin_1.png",
+    "assets/gamemaker-v11/spr_fx_coin_2.png",
+    "assets/gamemaker-v11/spr_fx_coin_3.png",
+    "assets/gamemaker-v11/spr_fx_coin_4.png",
+    "assets/gamemaker-v11/spr_fx_coin_5.png"
+  ],
+  "spr_fx_warning": [
+    "assets/gamemaker-v11/spr_fx_warning_0.png",
+    "assets/gamemaker-v11/spr_fx_warning_1.png",
+    "assets/gamemaker-v11/spr_fx_warning_2.png",
+    "assets/gamemaker-v11/spr_fx_warning_3.png",
+    "assets/gamemaker-v11/spr_fx_warning_4.png",
+    "assets/gamemaker-v11/spr_fx_warning_5.png"
+  ]
+}
