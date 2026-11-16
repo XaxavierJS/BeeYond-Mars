@@ -25,3 +25,7 @@ Enlace del equipo/proyecto, Local Event y guía de entrega; acceso de quien env�
 ## Condición de cierre
 
 Cerrar cada fila con evidencia concreta. El despliegue no cierra pruebas, NASA ni formulario. Registrar lo no probado y no convertir una hipótesis científica o una propuesta de diseño en un hecho validado.
+
+## Actualización de recursos y recorrido
+
+Atlas y fuente originales recuperados y publicados en 9389a7e. Se comprobaron 120 recursos en Pages y un recorrido de misión con checkpoints hasta final y rediseño. Ver [evidencia y límites](VERIFICACION-PAGES.md). Permanecen pendientes introducción sin checkpoints y dispositivo táctil real.
