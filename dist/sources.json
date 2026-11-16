@@ -1,0 +1,50 @@
+[
+  {
+    "title": "NASA Mars Fact Sheet",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+    "kind": "Verified context; simplified in game",
+    "use": "Mars/Earth solar irradiance ratio is 0.431. The game uses an explicitly simplified 0.85 cruise generation factor for balance. This is not an orbital or surface power model."
+  },
+  {
+    "title": "NASA Ames Trajectory Browser",
+    "url": "https://trajbrowser.arc.nasa.gov/",
+    "kind": "Team-transcribed scenarios",
+    "use": "The v11 file attributes 272/288-day routes and delta-v to this browser. Exact query/export was not supplied: these scenario values remain unverified, not certified trajectories."
+  },
+  {
+    "title": "NASA · travel time to Mars",
+    "url": "https://www.nasa.gov/directorates/smd/how-long-does-it-take-to-get-to-the-moon-mars-jupiter-we-asked-a-nasa-expert-episode-51/",
+    "kind": "Scientific context",
+    "use": "Typical travel takes roughly 7–10 months."
+  },
+  {
+    "title": "ESA Mars Express · signal delay",
+    "url": "https://blogs.esa.int/mex/2012/08/05/time-delay-between-mars-and-earth/",
+    "kind": "Scientific context",
+    "use": "About 4–24 minutes one way. The displayed linear interpolation is illustrative. Timed decisions represent onboard autonomy, not instant commands from Earth."
+  },
+  {
+    "title": "Bogo et al. (2017) · diapause and colony initiation",
+    "url": "https://cris.unibo.it/handle/11585/613718",
+    "kind": "Terrestrial study",
+    "use": "Mating status and pre-diapause weight affected outcomes in terrestrial rearing. Corrects the v11 misattribution of DOI 10.1007/s13592-017-0529-z to Alford (1969). Does not validate space transport."
+  },
+  {
+    "title": "Smithsonian · STS-41-C bee enclosure",
+    "url": "https://airandspace.si.edu/collection-objects/bee-enclosure-module-sts-41-c/nasm_A19880031000",
+    "kind": "Historical context",
+    "use": "Honeybees were studied in orbit; this is not evidence for dormant bumblebee queens on a Mars voyage."
+  },
+  {
+    "title": "JPL · Concept Maturity Levels",
+    "url": "https://dataverse.jpl.nasa.gov/dataset.xhtml?persistentId=hdl:2014/44299",
+    "kind": "Design inspiration",
+    "use": "Design reviews are inspired by maturity levels. Grants and approval criteria are fictional."
+  },
+  {
+    "title": "Model assumptions and art credits",
+    "url": "credits.html",
+    "kind": "Game design",
+    "use": "All credit prices, payload limits, launcher bus power, linear delta-v penalty, events and risk thresholds are fictional. 2.5 °C and 70% RH are inherited design targets, not a validated space protocol. Human travel, greenhouse and Nobel ending are imagined fiction."
+  }
+]

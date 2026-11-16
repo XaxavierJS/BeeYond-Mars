@@ -1,0 +1,162 @@
+{
+  "CFG": {
+    "version": 12,
+    "budget": 2000,
+    "grants": [
+      150,
+      200
+    ],
+    "batteryWh": 1600,
+    "storageMB": 128,
+    "solarArrival": 0.85,
+    "dvPerKg": 0.008,
+    "stageDays": 30,
+    "baseTemp": 2.5,
+    "baseHumidity": 70,
+    "criticalRisk": 80
+  },
+  "ITEMS": [
+    {
+      "id": "chamberA",
+      "name": "Economy chamber",
+      "role": 1,
+      "cost": 150,
+      "kg": 135,
+      "w": 200,
+      "gen": 0,
+      "kind": "chamber",
+      "icon": 1,
+      "desc": "Passive cooling. Two heat alarms need a sensor or a careful response."
+    },
+    {
+      "id": "chamberB",
+      "name": "Vanguard chamber",
+      "role": 1,
+      "cost": 300,
+      "kg": 90,
+      "w": 500,
+      "gen": 0,
+      "kind": "chamber",
+      "icon": 0,
+      "desc": "Active climate control. 500 W, not 800 W. Does not guarantee biological survival."
+    },
+    {
+      "id": "panels",
+      "name": "Solar wings",
+      "role": 0,
+      "cost": 400,
+      "kg": 70,
+      "w": 0,
+      "gen": 400,
+      "icon": 2,
+      "desc": "Adds 400 W at departure, 340 W under the simplified arrival factor. Heavy but useful."
+    },
+    {
+      "id": "thermal",
+      "name": "Thermal sensor",
+      "role": 0,
+      "cost": 150,
+      "kg": 0.3,
+      "w": 20,
+      "gen": 0,
+      "icon": 3,
+      "desc": "Detects heat alarms; controller responds automatically, using 10 W extra per alarm."
+    },
+    {
+      "id": "toolkit",
+      "name": "Repair toolkit",
+      "role": 0,
+      "cost": 150,
+      "kg": 20,
+      "w": 5,
+      "gen": 0,
+      "icon": 8,
+      "desc": "Two autonomous repair actions for heat or mechanical incidents."
+    },
+    {
+      "id": "antenna",
+      "name": "High-gain antenna",
+      "role": 2,
+      "cost": 300,
+      "kg": 60,
+      "w": 80,
+      "gen": 0,
+      "icon": 4,
+      "desc": "Sends up to 64 MB per 30 days. Does not change the speed of light."
+    },
+    {
+      "id": "backup",
+      "name": "Backup link",
+      "role": 2,
+      "cost": 150,
+      "kg": 25,
+      "w": 40,
+      "gen": 0,
+      "icon": 9,
+      "desc": "Sends 16 MB per 30 days. Automatically handles a signal incident."
+    },
+    {
+      "id": "dosimeter",
+      "name": "Radiation dosimeter",
+      "role": 2,
+      "cost": 50,
+      "kg": 0.3,
+      "w": 10,
+      "gen": 0,
+      "icon": 5,
+      "desc": "Adds 8 MB of observations per 30 days. Measures radiation; provides no shielding."
+    }
+  ],
+  "LAUNCHERS": [
+    {
+      "id": "scout",
+      "name": "Scout",
+      "cost": 0,
+      "cap": 190,
+      "dv": 6.8,
+      "power": 450,
+      "overhead": 10,
+      "desc": "Low-cost biological survey. Small payload; best with the Economy chamber."
+    },
+    {
+      "id": "medium",
+      "name": "Aurelia",
+      "cost": 200,
+      "cap": 250,
+      "dv": 7,
+      "power": 600,
+      "overhead": 0,
+      "desc": "Balanced payload and bus. Vanguard needs solar wings and careful instruments."
+    },
+    {
+      "id": "heavy",
+      "name": "Atlaswing",
+      "cost": 600,
+      "cap": 400,
+      "dv": 9.2,
+      "power": 1000,
+      "overhead": 50,
+      "desc": "Higher capacity and manoeuvre margin; expensive, with higher bus consumption."
+    }
+  ],
+  "ROUTES": [
+    {
+      "id": "standard",
+      "name": "The patient path",
+      "days": 288,
+      "dv": 4.79,
+      "depart": "2030-12-21",
+      "arrive": "2031-10-05",
+      "desc": "Standard transfer · lower manoeuvre requirement."
+    },
+    {
+      "id": "fast",
+      "name": "A little sooner",
+      "days": 272,
+      "dv": 4.84,
+      "depart": "2030-12-21",
+      "arrive": "2031-09-19",
+      "desc": "Fast transfer · 16 fewer days of exposure."
+    }
+  ]
+}
