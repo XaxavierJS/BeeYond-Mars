@@ -1,23 +1,23 @@
-# Guía para ampliar la versión final
+# Contributor guide for the final web edition
 
-## Fuente vigente
+## Active architecture
 
-La aplicación ejecuta dist/index.html → app.js. Sus módulos son engine.js (misión), data.js (reglas y fuentes), world.js (exploración), world-render.js (dibujo), assessment.js (evaluación) y audio.js. Las rutas son relativas a dist/. Los archivos de raíz eliminados son una versión anterior: no restaurarlos como implementación activa.
+`dist/index.html` loads `app.js`. Mission rules live in `engine.js`; parameters and sources in `data.js`; exploration in `world.js`; drawing in `world-render.js`; outcomes in `assessment.js`; audio in `audio.js`. Paths resolve relative to `dist/`. Deleted root implementations are historical and must not be restored as the active game.
 
-## Cambios seguros
+## Safe changes
 
-Antes de modificar, definir objetivo, pantallas afectadas y criterios observables. Mantener la estética retro, paleta existente, tipografías y proporción del pixel art; reutilizar componentes CSS antes de crear otros. Evitar cambios de balance como efecto secundario de ajustes visuales.
+Define the goal, affected screens and observable acceptance criteria first. Preserve the retro palette, typography, pixel-art proportions and existing composition. Reuse CSS components and avoid balance changes as a side effect of visual work.
 
-Para añadir equipo o rutas, revisar primero data.js y los consumidores en engine.js, app.js y assessment.js. Para escenas, revisar mapas, enlaces, puntos de entrada y colisiones en world.js y su dibujo en world-render.js. Las fuentes científicas deben conservar su URL y explicar cómo se usan y sus límites.
+For equipment or routes, review data.js and its engine.js, app.js and assessment.js consumers. For scenes, inspect map links, entry positions, collision rectangles and rendering. Keep scientific source URLs, explain how each source is used and preserve its limitations.
 
-El guardado usa beeyond-rpg13; la misión interna sigue versionada como 12. Conservar partidas existentes. No modificar la clave ni descartar datos como parte de una refactorización.
+Saves use `beeyond-rpg13`; embedded mission records still use version 12. Preserve existing saves. Never change a key or discard data as an incidental refactor.
 
-## Verificación
+## Verification
 
-Las pruebas de historia importan módulos de dist/. La suite antigua de motor importa archivos raíz eliminados y necesita una adaptación real, no un cambio mecánico de importación: las APIs difieren. Registrar por separado resultados de suites y limitaciones.
+Current story tests import modules from dist/. The legacy engine suite imports deleted root modules and requires substantive adaptation because the APIs differ. Report individual suites honestly.
 
-Al modificar UI, recorrer inicio, exploración, estación, lanzamiento, incidente, informe y retorno; comprobar foco, teclado, táctil, ventanas estrechas, texto y proporciones. No considerar una revisión estática equivalente a una partida completa.
+For UI changes, exercise opening, exploration, station interactions, launch, incidents, report and return. Check focus, keyboard, touch, narrow screens, readable text and resource proportions. Static inspection is not a complete playthrough. See hackathon/VERIFICACION-PAGES.md for the actual published checks and their limits.
 
-## Documentación
+## Documentation and rights
 
-README describe ejecución y arquitectura vigente. docs/SUBMISSION.md es un borrador de entrega. REVIEW.md y V13_GDD_REVIEW.md son informes recibidos del equipo con alcance temporal propio. No convertir sus afirmaciones en evidencia de una revisión nueva. La autoría del arte/audio y el uso autorizado de marca GameMaker fueron confirmados por el equipo en conversación; la elección Apache 2.0 también fue aprobada, pero los archivos legales anteriores fueron eliminados en la limpieza y deben conciliarse antes de publicar una declaración de licencia.
+README describes the current product; SUBMISSION.md contains reusable hackathon text; SOURCES.md records data provenance. REVIEW.md and V13_GDD_REVIEW.md distinguish historical context from current evidence. Original art/audio ownership and Apache 2.0 were confirmed by the team. Do not request those confirmations again. External research and trademarks retain their own terms. Keep public claims consistent with the active code and verification evidence.

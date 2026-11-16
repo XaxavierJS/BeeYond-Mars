@@ -1,31 +1,21 @@
-# Plan de cierre de la versión final
+# Final release and hackathon closure plan
 
-Base: AUDITORIA.md, 15 noviembre 2026. No añadir mecánicas ni rediseñar la estética durante el cierre.
+Updated 15 November 2026. Preserve the final game and its aesthetic; avoid adding mechanics during submission closure.
 
-| Orden | Trabajo | Evidencia para cerrarlo | Responsable/dependencia |
-|---|---|---|---|
-| 1 · P0 | Publicar dist con Pages | Workflow exitoso, URL pública y recursos principales responden | Desarrollo; Pages configurado con Actions |
-| 2 · P0 | Completar assets de esta entrega | Resolver tipografía ausente y atlas de abejas, revisar rutas de imágenes/audio; captura sin recursos rotos | Desarrollo + archivos fuente del equipo |
-| 3 · P0 | Confirmar entrega Space Apps | Evento, reto, miembros, horario, campos y recibo del envío | Responsable con acceso al portal |
-| 4 · P0 | Probar build pública | Inicio, conversación, estación, compra, lanzamiento, incidente, informe, rediseño, guardado y retorno; escritorio/móvil/teclado | Desarrollo y equipo con dispositivo táctil |
-| 5 · P0 | Evidenciar NASA | Consulta/export que reproduzca fechas/días/delta-v y demo de cómo afectan la decisión | Responsable científico; reporte/consulta original |
-| 6 · P0 | Crear demo final | Archivo real, formato vigente confirmado, inglés/subtítulos según evento y enlace sin permisos | Equipo; instrucciones Local Event |
-| 7 · P1 | Adaptar pruebas de motor | Suite importa API actual, valida restricciones, rutas viables, recursos, incidentes, roles, tiempo y rediseño | Desarrollo; no recuperar motor eliminado |
-| 8 · P1 | Conciliar documentación y licencia | README, fuentes, créditos y submission describen la misma versión; incluir Apache 2.0 ya aprobado y atribuciones aplicables | Desarrollo; autoría propia ya confirmada |
-| 9 · P2 | Validar aprendizaje y UX | Ensayo con jugadores: entienden por qué falló la nave y logran corregirla; registrar bloqueos y mejoras | Equipo/diseño |
+| Priority | Work | Completion evidence |
+|---|---|---|
+| P0 · done | Publish dist through GitHub Pages | Public HTML/JS and resource checks; resource repair commit 9389a7e |
+| P0 · done within stated scope | Restore original bee atlas and font | 120 resource requests passed; verification record and screenshots |
+| P0 | Confirm Space Apps delivery | Actual team/project link, Local Event, selected challenge, members, deadline, completed form and receipt |
+| P0 | Reproduce NASA route provenance | Original query/export matching current route dates, days and delta-v; demonstrate how those values affect play |
+| P0 | Record final demonstration | Real game footage/slides, current event format/language confirmed and public link checked |
+| P1 | Complete user journey testing | Opening and encounters without checkpoints, keyboard, physical touch, save/continue and failure variants |
+| P1 | Adapt legacy engine tests | Tests target the actual dist API and cover constraints, resources, incidents, timing, roles and redesign |
+| P1 | Keep source and submission claims aligned | README, sources, credits, license and form describe the same version and verification limits |
+| P2 | Assess learning and usability | External players explain a failure, revise a design and report blockers |
 
-## Publicación
+Pages publishes dist/ after pushes to main and supports manual workflow execution. The game URL is https://xaxavierjs.github.io/BeeYond-Mars/ . Publication is separate from submitting for judging.
 
-`.github/workflows/pages.yml` publica únicamente `dist/`. Cada push a main actualiza el sitio; también permite ejecución manual desde Actions. Revisar la ejecución antes de compartir el enlace. URL esperada: https://xaxavierjs.github.io/BeeYond-Mars/ . No confundir página publicada con envío al jurado.
+External information needed: project/team URL, Local Event and current submission instructions, person with portal access, final demo, exact AI tools, and original NASA query/export. Team ownership of original art/audio and Apache 2.0 approval are already confirmed.
 
-## Información externa pendiente
-
-Enlace del equipo/proyecto, Local Event y guía de entrega; acceso de quien envía; consulta/export NASA; demo final y herramientas IA declaradas. La aprobación de Apache y la autoría de arte/audio ya están confirmadas; no volver a pedirlas.
-
-## Condición de cierre
-
-Cerrar cada fila con evidencia concreta. El despliegue no cierra pruebas, NASA ni formulario. Registrar lo no probado y no convertir una hipótesis científica o una propuesta de diseño en un hecho validado.
-
-## Actualización de recursos y recorrido
-
-Atlas y fuente originales recuperados y publicados en 9389a7e. Se comprobaron 120 recursos en Pages y un recorrido de misión con checkpoints hasta final y rediseño. Ver [evidencia y límites](VERIFICACION-PAGES.md). Permanecen pendientes introducción sin checkpoints y dispositivo táctil real.
+Close each item with evidence. Do not label proposals, historical test claims or scientific hypotheses as verified current behavior. See AUDITORIA.md and VERIFICACION-PAGES.md.

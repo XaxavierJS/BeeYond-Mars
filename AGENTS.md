@@ -1,9 +1,9 @@
-# Instrucciones para contribuciones
+# Contribution instructions
 
-Leer README.md y docs/AI_CONTRIBUTOR_GUIDE.md. La aplicación activa se sirve desde dist/.
+Read README.md and docs/AI_CONTRIBUTOR_GUIDE.md. The active application is served from dist/.
 
-Preservar el juego final recibido, el arte pixelado y las proporciones de sus recursos. Mantener reglas en engine.js, datos en data.js y presentación en app.js/CSS. No restaurar versiones antiguas para corregir una prueba o una importación obsoleta.
+Preserve the final game, pixel art and resource proportions. Keep mission rules in engine.js, data in data.js and presentation in app.js/CSS. Do not restore an obsolete implementation to fix a test or stale import.
 
-Mantener teclado, controles táctiles, foco y reducción de movimiento. No cambiar guardados, claves ni versiones sin compatibilidad explícita. Distinguir fuentes científicas de reglas educativas del equipo. Documentar toda modificación de comportamiento y toda comprobación que siga pendiente.
+Preserve keyboard and touch controls, focus and reduced motion. Do not change save keys or versions without explicit compatibility handling. Distinguish scientific sources from team-defined educational rules. Document behavior changes and outstanding checks.
 
-Ejecutar las pruebas pertinentes y git diff --check. Para cambios visuales revisar la pantalla en escritorio y móvil. No afirmar que se probó una plataforma que no se comprobó.
+Run relevant tests and git diff --check. For visual changes, inspect affected screens on desktop and mobile. Never claim a platform was tested when it was not.
